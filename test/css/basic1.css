@@ -350,7 +350,7 @@ button::-moz-focus-inner {
  margin-bottom:17%;
  text-align: center;
 }
-.codearea img{height:100%;width:auto;}
+.codearea img{height:80%;width:auto;}
 .detext{
  padding:0 5%;
  font-size: .32rem;
