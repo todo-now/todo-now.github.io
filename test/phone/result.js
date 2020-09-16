@@ -64,6 +64,25 @@ let amonk = {
     }
 };
 amonk.setTime();
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return('136****4553');
+}
+function noPassByMobile(str){
+        if(null != str && str != undefined){
+            var pat=/(\d{3})\d*(\d{4})/;
+            return str.replace(pat,'$1****$2');
+        } else {
+            return "";
+        }
+    }
+$('.detext span').text(' ' + noPassByMobile(getQueryVariable('phone')) + ' ');
 function watermark(obj) {
     var date = new Date()
       , inntext = date.getFullYear() + '-';
